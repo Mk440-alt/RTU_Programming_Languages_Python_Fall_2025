@@ -16,22 +16,16 @@ Given the list:
 5. Print all results.
 """
 
-# Given list of numbers
 numbers = [3, 8, -2, 7, 0, -5, 10]
 
-# 1. List of squares
 squares = [x**2 for x in numbers]
 
-# 2. List of positive numbers
 positives = [x for x in numbers if x > 0]
 
-# 3. Set of even number squares
 even_squares = {x**2 for x in numbers if x % 2 == 0}
 
-# 4. Dictionary mapping numbers to their cubes
 cubes = {x: x**3 for x in numbers}
 
-# 5. Print results
 print("Numbers:", numbers)
 print("Squares:", squares)
 print("Positives:", positives)

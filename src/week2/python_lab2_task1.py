@@ -14,9 +14,7 @@ Instructions:
    - The total population of all cities.
 4. Print your results in a clear, formatted way.
 """
-
-# 1. Create the datasets
-temperatures = [15.3, 17.1, 18.4, 19.2, 16.8, 14.9, 15.7]  # °C for one week
+temperatures = [15.3, 17.1, 18.4, 19.2, 16.8, 14.9, 15.7]
 city_population = {
     "Vilnius": 592000,
     "Kaunas": 295000,
@@ -25,15 +23,13 @@ city_population = {
     "Panevėžys": 87000
 }
 
-# 2. Compute aggregates
 average_temperature = sum(temperatures) / len(temperatures)
-largest_city = max(city_population, key=city_population.get)
+largest_city = max(city_population.items(), key=lambda item: item[1])[0]
 largest_population = city_population[largest_city]
-smallest_city = min(city_population, key=city_population.get)
+smallest_city = min(city_population.items(), key=lambda item: item[1])[0]
 smallest_population = city_population[smallest_city]
 total_population = sum(city_population.values())
 
-# 3. Print results
 print("=== Weekly Temperature Report ===")
 print(f"Average temperature: {average_temperature:.2f}°C")
 print(f"Highest temperature: {max(temperatures):.1f}°C")
